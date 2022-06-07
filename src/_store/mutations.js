@@ -3,7 +3,7 @@ export default {
         if (newToDo.length) {
             state.toDos.push({ 
                 title: newToDo, 
-                completed: false 
+                completed: false
             })
         }
         state.newTodo = null
