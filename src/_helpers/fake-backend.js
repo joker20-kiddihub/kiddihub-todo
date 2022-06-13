@@ -10,7 +10,7 @@ let users = JSON.parse(localStorage.getItem('users')) || [
     { "id": "bhAzwm6qKl", "username": "Mỳ xào" },
     { "id": "izn7TzevOf", "username": "Mỳ cay" },
     { "id": "OgzDTCTs0v", "username": "Hủ tiếu" },
-    { "id": "JfanfnNJFN", "username": "Tào phớ" }
+    { "id": "JfanfnNJFN", "username": "Tào phớ" },
 ]
 
 export function configureFakeBackend() {
@@ -44,6 +44,7 @@ export function configureFakeBackend() {
                     } else {
                         // else return error
                         reject('Username is incorrect');
+                        alert("Username is incorrect");
                     }
 
                     return;

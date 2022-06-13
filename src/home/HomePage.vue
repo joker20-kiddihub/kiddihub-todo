@@ -1,6 +1,6 @@
 <template>
   <div class="col-sm-12 offset-sm-8">
-    <h1>Hi {{ account.user.username }}!</h1>
+    <h1>Hi {{ account.user.firstName + " " + account.user.lastName }}!</h1>
     <i>You're logged in</i>
     <!-- <h3>Users :</h3>
     <em v-if="users.loading">Loading users...</em>
@@ -18,8 +18,8 @@
     <p>
       <router-link to="/login">Logout</router-link>
     </p>
-    <h2 style="margin-left: 160px;">TO DO LIST</h2>
-    <br/>
+    <h2 style="margin-left: 170px;">TO DO LIST</h2>
+    <br />
     <div class="hello">
       {{ count }}
       <div class="box p-4" style="backgroundColor:#D5D778">
@@ -47,7 +47,7 @@
               </td>
               <td>
                 <div class="ok">
-                  <label @click="edit(item)">
+                  <label @click="edit(item)" style="margin-top: 10px;">
                     {{ item.title | capitalize }}
                   </label>
                   <input v-if="editting == item && item.completed != true" v-model="item.title" :class="{}"
@@ -59,18 +59,36 @@
                   x
                 </a>
               </td>
+              <td>
+                <select style="border-radius: 5px;">
+                  <option>10%</option>
+                  <option>20%</option>
+                  <option>30%</option>
+                  <option>40%</option>
+                  <option>50%</option>
+                  <option>60%</option>
+                  <option>70%</option>
+                  <option>80%</option>
+                  <option>90%</option>
+                </select>
+              </td>
+              <td>
+                <datepicker />
+              </td>
             </tr>
           </table>
         </div>
       </div>
       <br />
-      <span  style="margin-left: 120px;"> Click in task to edit, Enter to submit </span>
+      <span style="margin-left: 120px;"> Click in task to edit, Enter to submit </span>
     </div>
   </div>
 </template>
 
 <script>
 const LOCAL_STORAGE_KEY = "todo";
+import Datepicker from 'vuejs-datepicker';
+import { vi } from 'vuejs-datepicker/dist/locale'
 import { mapState, mapActions } from "vuex";
 export default {
   data() {
@@ -78,7 +96,11 @@ export default {
       toDos: this.$store.state.toDos,
       newTodo: this.$store.state.newToDo,
       editting: this.$store.state.editting,
-    };
+      vi: vi,
+    }
+  },
+  components: {
+    Datepicker
   },
   computed: {
     ...mapState({
@@ -136,8 +158,9 @@ export default {
   },
 };
 </script>
-<style>
-a {
-  margin-bottom: 10px;
+<style scoped>
+.completed label {
+  color: #ffffff;
+  text-decoration: line-through;
 }
 </style>
