@@ -1,17 +1,5 @@
 // array in local storage for registered users
-let users = JSON.parse(localStorage.getItem('users')) || [
-    { "id": "5nwLmrzBoh", "username": "Cơm sườn" },
-    { "id": "XhPFGzMpSw", "username": "Cơm rang" },
-    { "id": "CQzHn1UCwt", "username": "Bún chả" },
-    { "id": "jLZ0LCnyHH", "username": "Bún riêu" },
-    { "id": "AVVdxKZ96d", "username": "Bánh cuốn" },
-    { "id": "F3D6f7ekpE", "username": "Phở bò" },
-    { "id": "nutY2MqLrx", "username": "Phở gà" },
-    { "id": "bhAzwm6qKl", "username": "Mỳ xào" },
-    { "id": "izn7TzevOf", "username": "Mỳ cay" },
-    { "id": "OgzDTCTs0v", "username": "Hủ tiếu" },
-    { "id": "JfanfnNJFN", "username": "Tào phớ" },
-]
+let users = JSON.parse(localStorage.getItem('users')) || []
 
 export function configureFakeBackend() {
     let realFetch = window.fetch;
@@ -140,3 +128,15 @@ export function configureFakeBackend() {
         });
     }
 }
+// [
+//     { "id": "5nwLmrzBoh", "username": "Cơm sườn" },
+//     { "id": "XhPFGzMpSw", "username": "Cơm rang" },
+//     { "id": "CQzHn1UCwt", "username": "Bún chả" },
+//     { "id": "jLZ0LCnyHH", "username": "Bún riêu" },
+//     { "id": "AVVdxKZ96d", "username": "Bánh cuốn" },
+//     { "id": "F3D6f7ekpE", "username": "Phở bò" },
+//     { "id": "nutY2MqLrx", "username": "Phở gà" },
+//     { "id": "bhAzwm6qKl", "username": "Mỳ xào" },
+//     { "id": "izn7TzevOf", "username": "Mỳ cay" },
+//     { "id": "OgzDTCTs0v", "username": "Hủ tiếu" }
+// ]
