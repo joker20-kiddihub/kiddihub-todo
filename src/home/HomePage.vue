@@ -2,7 +2,7 @@
   <div class="col-sm-12 offset-sm-8">
     <h1>Hi {{ account.user.firstName + " " + account.user.lastName }}!</h1>
     <i>You're logged in</i>
-    <!-- <h3>Users :</h3>
+    <h3>Users :</h3>
     <em v-if="users.loading">Loading users...</em>
     <span v-if="users.error" class="text-danger">ERROR: {{ users.error }}</span>
     <ul v-if="users.items">
@@ -14,7 +14,7 @@
         <span v-else>
           - <a @click="deleteUser(user.id)" class="text-danger">Delete</a></span>
       </li>
-    </ul> -->
+    </ul>
     <p>
       <router-link to="/login">Logout</router-link>
     </p>
@@ -61,15 +61,9 @@
               </td>
               <td>
                 <select style="border-radius: 5px;">
-                  <option>10%</option>
-                  <option>20%</option>
-                  <option>30%</option>
-                  <option>40%</option>
-                  <option>50%</option>
-                  <option>60%</option>
-                  <option>70%</option>
-                  <option>80%</option>
-                  <option>90%</option>
+                  <option>10%</option> <option>20%</option> <option>30%</option>
+                  <option>40%</option> <option>50%</option> <option>60%</option>
+                  <option>70%</option> <option>80%</option> <option>90%</option>
                 </select>
               </td>
               <td>
