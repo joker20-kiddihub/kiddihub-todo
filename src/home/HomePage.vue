@@ -67,7 +67,7 @@
                 </select>
               </td>
               <td>
-                <datepicker />
+                <datepicker :language="vi"></datepicker>
               </td>
             </tr>
           </table>
