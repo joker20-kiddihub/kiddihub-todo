@@ -1,9 +1,15 @@
 export default {
-    addTask (state, newToDo) {
+    addTask (state, newToDo, newId, user_id) {
         if (newToDo.length) {
             state.toDos.push({ 
+                //id | descripton(html) | user_id | completed_at |  created_at
+                id: newId,
                 title: newToDo, 
-                completed: false
+                completed: false,
+                description: null,
+                user_id: user_id,
+                completed_at: null,
+                create_at: Date().toString(),
             })
         }
         state.newTodo = null
