@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div>
-                    <div v-if="alert.message" :class="`alert ${alert.type}`">{{alert.message}}</div>
+                    <div v-if="alert.message" :class="`alert ${alert.type}`">{{ alert.message }}</div>
                     <router-view></router-view>
                 </div>
             </div>
@@ -23,14 +23,13 @@ export default {
     },
     methods: {
         ...mapActions({
-            clearAlert: 'alert/clear' 
+            clearAlert: 'alert/clear'
         })
     },
     watch: {
-        $route (to, from){
-            // clear alert on location change
+        $route(to, from) {
             this.clearAlert();
         }
-    } 
+    }
 };
 </script>

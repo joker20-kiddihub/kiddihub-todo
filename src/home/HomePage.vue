@@ -1,6 +1,6 @@
 <template>
   <div class="col-sm-12 offset-sm-8">
-    <h1>Hi {{ account.user.firstName + " " + account.user.lastName }}!</h1>
+    <h1>Hi {{ account.user.username }}!</h1>
     <i>You're logged in</i>
     <!-- <h3>Users :</h3>
     <em v-if="users.loading">Loading users...</em>
@@ -47,6 +47,7 @@
               </td>
               <td>
                 <div class="ok">
+                  <label>{{ firstTodo }}</label>
                   <label @click="edit(item)" style="margin-top: 10px;">
                     {{ item.title | capitalize }}
                   </label>
@@ -88,6 +89,7 @@ export default {
   data() {
     return {
       toDos: this.$store.state.toDos,
+      firstTodo: this.$store.state.account.user.id,
       newTodo: this.$store.state.newToDo,
       editting: this.$store.state.editting,
       vi: vi,
@@ -156,5 +158,43 @@ export default {
 .completed label {
   color: #ffffff;
   text-decoration: line-through;
+}
+
+label {
+  cursor: pointer;
+}
+
+table {
+  width: 70%;
+}
+
+table,
+td {
+  border: 1px black;
+  text-align: left;
+}
+
+table td .delete {
+  display: none;
+}
+
+table tr:hover .delete {
+  display: block;
+}
+
+.mark {
+  width: 50px;
+  height: auto;
+}
+
+.ok {
+  position: relative;
+}
+
+.ok input {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
 }
 </style>
