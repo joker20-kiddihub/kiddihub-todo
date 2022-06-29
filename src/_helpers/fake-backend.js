@@ -1,4 +1,4 @@
-let users = [
+let users = JSON.parse(localStorage.getItem('users')) && [
     { "id": "5nwLmrzBoh", "username": "Cơm sườn" },
     { "id": "XhPFGzMpSw", "username": "Cơm rang" },
     { "id": "CQzHn1UCwt", "username": "Bún chả" },
@@ -8,8 +8,7 @@ let users = [
     { "id": "nutY2MqLrx", "username": "Phở gà" },
     { "id": "bhAzwm6qKl", "username": "Mỳ xào" },
     { "id": "izn7TzevOf", "username": "Mỳ cay" },
-    { "id": "OgzDTCTs0v", "username": "Hủ tiếu" },
-    { "id": "fjslfgklgf", "username": "Tào phớ"}
+    { "id": "OgzDTCTs0v", "username": "Hủ tiếu" }
 ]
 
 export function configureFakeBackend() {
@@ -30,13 +29,11 @@ export function configureFakeBackend() {
                         let responseJson = {
                             id: user.id,
                             username: user.username,
-                            firstName: user.firstName,
-                            lastName: user.lastName,
                             token: 'fake-jwt-token'
                         };
                         resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(responseJson)) });
                     } else {
-                        reject('Username is incorrect');
+                        reject("Username is incorrect");
                         alert("Username is incorrect");
                     }
 
