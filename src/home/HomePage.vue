@@ -47,7 +47,7 @@
               </td>
               <td>
                 <div class="ok">
-                  <label>{{ firstTodo }}</label>
+                  <!-- <label>{{ firstTodo }}</label> -->
                   <label @click="edit(item)" style="margin-top: 10px;">
                     {{ item.title | capitalize }}
                   </label>
