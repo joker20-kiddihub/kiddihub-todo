@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container">
-            <div class="row"    >
+            <div class="row">
                 <div>
                     <div v-if="alert.message" :class="`alert ${alert.type}`">{{ alert.message }}</div>
                     <router-view></router-view>

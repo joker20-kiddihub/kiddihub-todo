@@ -15,8 +15,11 @@ export const store = new Vuex.Store({
         account,
         users
     },
-    state: {  
-        toDos: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [],
+    state: {
+        toDos: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) &&
+            [
+                { "completed": false, "title": account.state.user.id },
+            ],
         newTodo: null,
         editting: null,
     },

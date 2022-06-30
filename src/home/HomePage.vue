@@ -47,9 +47,8 @@
               </td>
               <td>
                 <div class="ok">
-                  <!-- <label>{{ firstTodo }}</label> -->
                   <label @click="edit(item)" style="margin-top: 10px;">
-                    {{ item.title | capitalize }}
+                    {{ item.title }}
                   </label>
                   <input v-if="editting == item && item.completed != true" v-model="item.title" :class="{}"
                     @keyup.escape="doneEdit" @keyup.enter="doneEdit" />
@@ -62,9 +61,15 @@
               </td>
               <!-- <td>
                 <select style="border-radius: 5px;">
-                  <option>10%</option> <option>20%</option> <option>30%</option>
-                  <option>40%</option> <option>50%</option> <option>60%</option>
-                  <option>70%</option> <option>80%</option> <option>90%</option>
+                  <option>10%</option>
+                  <option>20%</option>
+                  <option>30%</option>
+                  <option>40%</option>
+                  <option>50%</option>
+                  <option>60%</option>
+                  <option>70%</option>
+                  <option>80%</option>
+                  <option>90%</option>
                 </select>
               </td>
               <td>
@@ -89,7 +94,6 @@ export default {
   data() {
     return {
       toDos: this.$store.state.toDos,
-      firstTodo: this.$store.state.account.user.id,
       newTodo: this.$store.state.newToDo,
       editting: this.$store.state.editting,
       vi: vi,
@@ -137,13 +141,13 @@ export default {
       this.editting = null;
     },
   },
-  filters: {
-    capitalize: function (value) {
-      if (!value) return "";
-      value = value.toString();
-      return value.charAt(0).toUpperCase() + value.slice(1);
-    },
-  },
+  // filters: {
+  //   capitalize: function (value) {
+  //     if (!value) return "";
+  //     value = value.toString();
+  //     return value.charAt(0).toUpperCase() + value.slice(1);
+  //   },
+  // },
   watch: {
     toDos: {
       deep: true,
