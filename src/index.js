@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import VeeValidate from 'vee-validate';
 import Vuex from 'vuex'
+
 import { store } from './_store';
 import { router } from './_helpers';
+
 import App from './app/App';
 
 Vue.use(VeeValidate);

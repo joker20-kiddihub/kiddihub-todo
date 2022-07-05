@@ -9,7 +9,7 @@ const state = user
 const actions = {
     login({ dispatch, commit }, { username }) {
         commit('loginRequest', { username });
-    
+
         userService.login(username)
             .then(
                 user => {
@@ -28,7 +28,7 @@ const actions = {
     },
     register({ dispatch, commit }, user) {
         commit('registerRequest', user);
-    
+
         userService.register(user)
             .then(
                 user => {

@@ -2,7 +2,8 @@
     <div>
         <div class="todo">
             <div class="title">
-                <img src="https://icon-library.com/images/todo-list-icon/todo-list-icon-17.jpg" width="100" height="100">
+                <img src="https://icon-library.com/images/todo-list-icon/todo-list-icon-17.jpg" width="100"
+                    height="100">
                 <h1>TodoApp</h1>
                 <h5>Lists & Tasks</h5>
             </div>
@@ -17,13 +18,14 @@
                     <div v-show="submitted && !username" class="invalid-feedback">Username is required</div>
                 </div>
                 <div class="form-group">
-                    <button style="background-color: #D5D778; border-radius: 10px; width: 250px;" :disabled="status.loggingIn">
+                    <button style="background-color: #D5D778; border-radius: 10px; width: 250px;"
+                        :disabled="status.loggingIn">
                         <a href="http://localhost:3000/login"></a>
                         Login
                     </button>
                     <img v-show="status.loggingIn"
                         src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-                    <br/>
+                    <br />
                     <!-- <router-link to="/register" class="btn btn-link">Register</router-link> -->
                 </div>
             </form>
@@ -63,6 +65,7 @@ export default {
 h3 {
     margin-left: 85px;
 }
+
 .todo {
     position: absolute;
     width: 428px;
@@ -88,6 +91,7 @@ h3 {
     left: 850px;
     top: 270px;
 }
+
 .form-control {
     align-items: center;
 }

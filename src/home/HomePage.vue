@@ -2,19 +2,6 @@
   <div class="col-sm-12 offset-sm-8">
     <h1>Hi {{ account.user.username }}!</h1>
     <i>You're logged in</i>
-    <!-- <h3>Users :</h3>
-    <em v-if="users.loading">Loading users...</em>
-    <span v-if="users.error" class="text-danger">ERROR: {{ users.error }}</span>
-    <ul v-if="users.items">
-      <li v-for="user in users.items" :key="user.id">
-        {{ user.username }}
-        <span v-if="user.deleting"><em> - Deleting...</em></span>
-        <span v-else-if="user.deleteError" class="text-danger">
-          - ERROR: {{ user.deleteError }}</span>
-        <span v-else>
-          - <a @click="deleteUser(user.id)" class="text-danger">Delete</a></span>
-      </li>
-    </ul> -->
     <p>
       <router-link to="/login">Logout</router-link>
     </p>
@@ -141,13 +128,6 @@ export default {
       this.editting = null;
     },
   },
-  // filters: {
-  //   capitalize: function (value) {
-  //     if (!value) return "";
-  //     value = value.toString();
-  //     return value.charAt(0).toUpperCase() + value.slice(1);
-  //   },
-  // },
   watch: {
     toDos: {
       deep: true,

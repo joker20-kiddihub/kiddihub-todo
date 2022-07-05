@@ -25,7 +25,7 @@ export function configureFakeBackend() {
                     });
 
                     if (filteredUsers.length) {
-                        let user = filteredUsers[0] ;
+                        let user = filteredUsers[0];
                         let responseJson = {
                             id: user.id,
                             username: user.username,

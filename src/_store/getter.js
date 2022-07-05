@@ -1,13 +1,13 @@
 export default {
     notDone: (state) => {
-        return state.toDos.filter(m => m.completed == false).length 
-      },
+        return state.toDos.filter(m => m.completed == false).length
+    },
     Done: (state) => {
         return state.toDos.filter(m => m.completed == true).length
     },
-    allTasks: (state) =>  {
+    allTasks: (state) => {
         return state.toDos.length
-    }, 
+    },
     count: (state) => {
         return state.count
     }

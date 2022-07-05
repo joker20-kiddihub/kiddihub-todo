@@ -1,11 +1,11 @@
 export default {
-    addTask ({commit}, newToDo) {
+    addTask({ commit }, newToDo) {
         commit('addTask', newToDo)
     },
-    deleteToDo ({commit}, item) {
+    deleteToDo({ commit }, item) {
         commit('deleteToDo', item)
     },
-    doneEdit ({commit}, item) {
+    doneEdit({ commit }, item) {
         commit('doneEdit', item)
     }
 }
